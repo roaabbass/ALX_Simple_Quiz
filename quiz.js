@@ -14,6 +14,8 @@ function checkAnswer() {
         feedbackElement.textContent = "Please select an answer.";
     } else if (userAnswer === correctAnswer) {
         feedbackElement.textContent = "Correct! Well done.";
+    } else if (userAnswer.value === correctAnswer) {
+        feedbackElement.textContent = "Correct! Well done.";
     } else {
         feedbackElement.textContent = "That's incorrect. Try again!";
     }
