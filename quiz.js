@@ -9,13 +9,24 @@ function checkAnswer() {
     // Element to display feedback
     const feedbackElement = document.getElementById('feedback');
 
-    // Check if user's answer is correct
-    if (userAnswer.value === correctAnswer) {
-        feedbackElement.textContent = "Correct! Well done.";
+    // Check if an answer is selected
+    if (userAnswer) {
+        // Check if user's answer is correct
+        if (userAnswer.value === correctAnswer) {
+            feedbackElement.textContent = "Correct! Well done.";
+        } else {
+            feedbackElement.textContent = "That's incorrect. Try again!";
+        }
     } else {
-        feedbackElement.textContent = "That's incorrect. Try again!";
+        // If no answer is selected
+        feedbackElement.textContent = "Please select an answer.";
     }
 }
 
-// Add event listener to the submit button
-document.getElementById('submit-answer').addEventListener('click', checkAnswer);
+// Add event listener to the "Submit Answer" button
+document.addEventListener('DOMContentLoaded', function() {
+    const submitButton = document.getElementById('submit-answer');
+    if (submitButton) {
+        submitButton.addEventListener('click', checkAnswer);
+    }
+});
