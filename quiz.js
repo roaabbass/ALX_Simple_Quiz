@@ -12,7 +12,7 @@ function checkAnswer() {
     // Check if an answer is selected
     if (!userAnswer) {
         feedbackElement.textContent = "Please select an answer.";
-    } else if (userAnswer.value === correctAnswer) {
+    } else if (userAnswer === correctAnswer) {
         feedbackElement.textContent = "Correct! Well done.";
     } else {
         feedbackElement.textContent = "That's incorrect. Try again!";
