@@ -10,7 +10,7 @@ function checkAnswer() {
     const feedbackElement = document.getElementById('feedback');
 
     // Check if an answer is selected and compare with correct answer
-    if (userAnswer && userAnswer.value === correctAnswer) {
+    if (userAnswer.value === correctAnswer) {
         feedbackElement.textContent = "Correct! Well done.";
     } else {
         // If no answer is selected or incorrect answer
