@@ -18,10 +18,10 @@ function checkAnswer() {
             feedbackElement.textContent = "That's incorrect. Try again!";
         }
     } else {
-        // If no answer is selected
+        
         feedbackElement.textContent = "Please select an answer.";
     }
 }
 
-// Add event listener to the submit button
+
 document.getElementById('submit-answer').addEventListener('click', checkAnswer);
